@@ -1,7 +1,7 @@
 import express from "express";
-import { Item } from "../models/itemModel";
+import mongoose from "mongoose";
+import { Item } from "../models/itemModel.js";
 import dotenv from "dotenv";
-
 
 dotenv.config()
 
