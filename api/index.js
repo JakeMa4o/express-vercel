@@ -1,5 +1,5 @@
 import express from "express";
-import mongoose from "mongoose";
+import { Item } from "../models/itemModel";
 import dotenv from "dotenv";
 
 
@@ -10,24 +10,6 @@ app.use(express.json())
 
 // const connectionString = process.env.MONGODB_URI || "";
 const connectionString = process.env.MONGODB_URI || "";
-
-const itemSchema = mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
-    }
-  },
-  {
-    timestaps: true
-  }
-)
-
-const Item = mongoose.model("Item", itemSchema);
 
 
 app.get("/", (req, res) => {
